@@ -1,14 +1,22 @@
 # File Tree: shoesweb
 
-**Generated:** 11/22/2026, 5:04:41 PM
+**Generated:** 11/22/2026, 5:56:42 PM
 **Root Path:** `c:\Users\fm005\OneDrive\Desktop\shoesweb\shoesweb`
 
 ```
 ├── 📁 app
+│   ├── 🖼️ apple-icon.png
+│   ├── 📄 favicon.ico
 │   ├── 🎨 globals.css
+│   ├── 🖼️ icon.svg
 │   ├── 📄 layout.js
+│   ├── 📄 manifest.js
+│   ├── 🖼️ opengraph-image.png
 │   ├── 📄 page.js
-│   └── 🎨 page.module.css
+│   ├── 🎨 page.module.css
+│   ├── 📄 robots.js
+│   ├── 📄 sitemap.js
+│   └── 🖼️ twitter-image.png
 ├── 📁 components
 │   ├── 📁 CartDrawer
 │   │   ├── 📄 CartDrawer.js
@@ -34,10 +42,11 @@
 │   ├── 📁 Showcase
 │   │   ├── 📄 Showcase.js
 │   │   └── 🎨 Showcase.module.css
-│   └── 📁 ui
-│       ├── 📄 Reveal.js
-│       ├── 🎨 Reveal.module.css
-│       └── 📄 SmartImage.js
+│   ├── 📁 ui
+│   │   ├── 📄 Reveal.js
+│   │   ├── 🎨 Reveal.module.css
+│   │   └── 📄 SmartImage.js
+│   └── 📄 JsonLd.js
 ├── 📁 data
 │   ├── 📄 products.js
 │   └── 📄 site.js
@@ -47,26 +56,30 @@
 │   ├── 📄 icons.js
 │   └── 📄 utils.js
 ├── 📁 public
-│   └── 📁 images
-│       ├── 📁 clothes
-│       │   ├── 🖼️ cargo-street.png
-│       │   ├── 🖼️ casquette-b.png
-│       │   ├── 🖼️ hoodie-braise.png
-│       │   ├── 🖼️ short-sport.png
-│       │   ├── 🖼️ tee-oversize.png
-│       │   └── 🖼️ veste-vent.png
-│       ├── 📁 looks
-│       │   ├── 🖼️ look-1.png
-│       │   ├── 🖼️ look-2.png
-│       │   ├── 🖼️ look-3.png
-│       │   └── 🖼️ look-4.png
-│       └── 📁 sneakers
-│           ├── 🖼️ Air-Jordan.png
-│           ├── 🖼️ Giannis-Immortality-5.png
-│           ├── 🖼️ Irving-shoes.png
-│           ├── 🖼️ Jordan-Luka-4.png
-│           ├── 🖼️ LeBron-Witness-9.png
-│           └── 🖼️ flame-runner.png
+│   ├── 📁 images
+│   │   ├── 📁 clothes
+│   │   │   ├── 🖼️ cargo-street.png
+│   │   │   ├── 🖼️ casquette-b.png
+│   │   │   ├── 🖼️ hoodie-braise.png
+│   │   │   ├── 🖼️ short-sport.png
+│   │   │   ├── 🖼️ tee-oversize.png
+│   │   │   └── 🖼️ veste-vent.png
+│   │   ├── 📁 looks
+│   │   │   ├── 🖼️ look-1.png
+│   │   │   ├── 🖼️ look-2.png
+│   │   │   ├── 🖼️ look-3.png
+│   │   │   └── 🖼️ look-4.png
+│   │   ├── 📁 sneakers
+│   │   │   ├── 🖼️ air-Jordan.png
+│   │   │   ├── 🖼️ flame-runner.png
+│   │   │   ├── 🖼️ giannis-Immortality-5.png
+│   │   │   ├── 🖼️ irving-shoes.png
+│   │   │   ├── 🖼️ jordan-Luka-4.png
+│   │   │   └── 🖼️ leBron-Witness-9.png
+│   │   ├── 🖼️ logo.png
+│   │   └── 🖼️ placeholder.svg
+│   ├── 🖼️ icon-192.png
+│   └── 🖼️ icon-512.png
 ├── 📁 scripts
 │   └── 📄 build-looks.mjs
 ├── ⚙️ .gitignore

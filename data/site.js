@@ -8,6 +8,20 @@ export const SITE = {
   description:
     "Boutique de baskets à Abidjan : nouveautés, éditions limitées et streetwear. Livraison rapide dans toutes les communes.",
 
+  // Adresse du site (sans "/" à la fin). Change-la quand le client aura son vrai domaine.
+  // Elle sert au référencement Google (sitemap, robots, image de partage).
+  url: "https://braise-shoes.vercel.app",
+
+  // Mots-clés pour le référencement
+  keywords: [
+    "sneakers Abidjan",
+    "baskets Abidjan",
+    "streetwear Côte d'Ivoire",
+    "boutique chaussures Abidjan",
+    "Jordan",
+    "LeBron",
+  ],
+
   // Ton logo : dépose-le dans /public/images/ (svg, png ou webp) puis change le nom ici
   logo: "/images/logo.png",
 
