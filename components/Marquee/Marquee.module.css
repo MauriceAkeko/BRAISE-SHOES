@@ -1,0 +1,46 @@
+/* Marquee — styles du composant (couleurs dans globals.css) */
+
+/* ============ 4. BANDEAU DÉFILANT ============ */
+.marquee {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--cream);
+  transform: rotate(-1.2deg) scale(1.03);
+  margin-block: -10px;
+  padding-block: 18px;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marqueeList {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.marqueeList li {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-right: 28px;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 34px);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marqueeIcon {
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}

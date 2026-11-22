@@ -1,0 +1,121 @@
+/* =====================================================================
+page.module.css — styles PARTAGÉS (conteneur, titres, boutons, notification).
+Chaque composant a son propre fichier : components/NomDuComposant.module.css.
+Couleurs : modifie-les dans globals.css (variables --red, --ink, --cream).
+===================================================================== */
+
+/* ============ 1. BASE / UTILITAIRES ============ */
+.container {
+  width: min(1280px, 100% - 2 * clamp(16px, 4vw, 56px));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(72px, 10vw, 140px);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.kicker::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: currentColor;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(44px, 8vw, 120px);
+  line-height: .92;
+  margin-top: 14px;
+}
+
+.title em {
+  font-style: normal;
+  color: var(--red);
+}
+
+/* Boutons : le rouge "remplit" le bouton au survol */
+.btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: var(--ink);
+  color: var(--cream);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--red);
+  transform: translateY(101%);
+  transition: transform .45s cubic-bezier(.2, .9, .2, 1);
+}
+
+.btn:hover::before {
+  transform: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -10px rgba(225, 15, 31, .6);
+}
+
+.btnRed {
+  background: var(--red);
+  color: var(--white);
+}
+
+.btnRed::before {
+  background: var(--ink);
+}
+
+.btnWide {
+  width: 100%;
+}
+
+/* ============ 9. NOTIFICATION ============ */
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  z-index: 120;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 160%);
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+  font-weight: 600;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, .4);
+  transition: transform .5s cubic-bezier(.2, 1.4, .4, 1);
+  max-width: calc(100% - 32px);
+}
+
+.toastOn {
+  transform: translate(-50%, 0);
+}

@@ -1,0 +1,19 @@
+/* Reveal — styles du composant (couleurs dans globals.css) */
+
+/* Apparition au scroll (flou + 3D) */
+.reveal {
+  opacity: 0;
+  filter: blur(10px);
+  transform-origin: 50% 100%;
+  transform: translate3d(0, 50px, 0) rotateX(12deg) scale(.97);
+  transition:
+    opacity .9s cubic-bezier(.2, .9, .2, 1),
+    transform .9s cubic-bezier(.2, .9, .2, 1),
+    filter .9s;
+}
+
+.in {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}

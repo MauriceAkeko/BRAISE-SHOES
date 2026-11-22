@@ -1,0 +1,84 @@
+/* Footer — styles du composant (couleurs dans globals.css) */
+
+/* ============ 10. FOOTER ============ */
+.footer {
+  background: var(--ink);
+  color: var(--cream);
+  padding: clamp(56px, 8vw, 110px) 0 28px;
+  overflow: hidden;
+}
+
+.footerBig {
+  font-family: var(--font-display);
+  font-size: clamp(80px, 24vw, 360px);
+  line-height: .8;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--red);
+  text-align: center;
+  letter-spacing: .02em;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 56px;
+}
+
+.footerGrid h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: var(--red);
+}
+
+.footerGrid p {
+  margin-bottom: 6px;
+  opacity: .85;
+}
+
+.footerGrid a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.zones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.zones li {
+  padding: 6px 14px;
+  border: 1px solid rgba(246, 242, 236, .25);
+  border-radius: 999px;
+  font-size: .85rem;
+}
+
+.copy {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(246, 242, 236, .15);
+  font-size: .8rem;
+  opacity: .6;
+}
+
+@media (max-width: 860px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerGrid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zones li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

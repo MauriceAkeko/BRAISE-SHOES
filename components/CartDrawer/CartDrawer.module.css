@@ -1,0 +1,231 @@
+/* CartDrawer — styles du composant (couleurs dans globals.css) */
+
+/* ============ 8. PANIER ============ */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(14, 14, 16, .55);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s;
+}
+
+.overlayOn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(440px, 100%);
+  background: var(--cream);
+  padding: 22px;
+  overflow-y: auto;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform .6s cubic-bezier(.7, 0, .2, 1), visibility 0s .6s;
+}
+
+.drawerOn {
+  transform: none;
+  visibility: visible;
+  transition: transform .6s cubic-bezier(.7, 0, .2, 1), visibility 0s;
+}
+
+.drawerHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.drawerHead h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  transition: background .25s, color .25s, transform .3s;
+}
+
+.close:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 60px 0;
+}
+
+.lines {
+  display: grid;
+  gap: 12px;
+}
+
+.line2 {
+  display: grid;
+  grid-template-columns: 76px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 18px;
+  background: var(--white);
+}
+
+.lineImg {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  background: var(--cream);
+  border-radius: 14px;
+}
+
+.lineInfo {
+  display: grid;
+  gap: 2px;
+  font-size: .9rem;
+}
+
+.lineInfo span {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.lineCtrl {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.lineCtrl select {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+}
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 6px;
+}
+
+.qty button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.qty button:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.remove {
+  align-self: start;
+  padding: 4px;
+  opacity: .6;
+  transition: opacity .2s, transform .2s;
+}
+
+.remove:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.form label {
+  display: grid;
+  gap: 4px;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.form input,
+.form select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  font-weight: 400;
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 0 4px rgba(225, 15, 31, .15);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.1rem;
+}
+
+.totalRow b {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.9rem;
+  color: var(--red);
+}
+
+.err {
+  font-style: normal;
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--red);
+}
+
+.honeypot {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.note {
+  font-size: .8rem;
+  color: var(--muted);
+}
+
+.close,
+.qty button,
+.remove {
+  display: grid;
+  place-items: center;
+}
+
+.empty svg {
+  margin: 0 auto 10px;
+  color: var(--red);
+}

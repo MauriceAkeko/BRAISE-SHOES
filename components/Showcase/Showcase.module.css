@@ -1,0 +1,75 @@
+/* Showcase — styles du composant (couleurs dans globals.css) */
+
+/* ============ 5. SÉLECTION FLOTTANTE (parallax) ============ */
+.showcase {
+  --mx: 0;
+  --my: 0;
+  --sy: 0;
+  overflow: hidden;
+}
+
+.floatField {
+  position: relative;
+  width: 100%;
+  height: clamp(520px, 80vh, 820px);
+  margin-top: 20px;
+}
+
+.floater {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  display: block;
+  transform: translate3d(calc(var(--mx) * var(--d) * -1px), calc(var(--my) * var(--d) * -1px + var(--sy) * var(--d) * 4px), 0) rotate(var(--r));
+  transition: transform .5s cubic-bezier(.2, .9, .2, 1);
+}
+
+.floaterInner {
+  position: relative;
+  display: block;
+  animation: bob 6s ease-in-out infinite;
+  animation-delay: var(--delay);
+  transition: transform .5s cubic-bezier(.2, 1.4, .4, 1);
+}
+
+.floater:hover .floaterInner {
+  transform: scale(1.12) rotate(-4deg);
+}
+
+@keyframes bob {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -22px;
+  }
+}
+
+.floaterImg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 30px 24px rgba(0, 0, 0, .28));
+}
+
+.floaterLabel {
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  transform: translate(-50%, 10px);
+  white-space: nowrap;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: .8rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+}
+
+.floater:hover .floaterLabel,
+.floater:focus-visible .floaterLabel {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
